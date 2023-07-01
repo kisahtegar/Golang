@@ -1,5 +1,5 @@
 # Bootcamp Golang hmsi: Pertemuan 1
-A new backend project with Golang.
+introduction to golang.
 
 ## 📋 Previews
 This the output after running the project.

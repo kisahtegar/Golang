@@ -12,6 +12,7 @@ This documentation contains some link: learning, note and other.
 ## 🧪 Testing Application
 This link contains a Testing Application:
 - [first_test: First time touch Golang](https://github.com/kisahtegar/golang/tree/master/demo/first_test)
+- [bootcamp_go_hmsi: Golang bootcamp with HMSI](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi)
 
 ## 📝 Golang Note
 This link contains a Note:
