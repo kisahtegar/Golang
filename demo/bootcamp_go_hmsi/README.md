@@ -1,6 +1,6 @@
 # Bootcamp Golang hmsi
 
-A new backend project with Golang.
+A new backend project with Golang. Introduction Golang and make WEB API with Golang.
 
 <!-- ## 📋 Previews -->
 
