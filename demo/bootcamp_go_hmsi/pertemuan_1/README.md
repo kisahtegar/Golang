@@ -10,11 +10,11 @@ This the output after running the project.
     2023/07/01 13:06:20 Ini adalah beberapa nama user: Kellyn, Sultan, Adew.
 
 ## 🧪 Getting Started
-To run the project, first make sure that the project is compiled:
+You can run the project with (.exe), first make sure that the project is compiled:
 
     go build
 
-After that run the project, do:
+Or you can run the project with:
 
     go run main.go
 
