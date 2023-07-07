@@ -1,4 +1,4 @@
-# Bootcamp Golang hmsi: Pertemuan 3
+# Bootcamp Golang hmsi: Pertemuan 2.1
 Learning about operator in golang and some study cases.
 
 ## 📋 Previews

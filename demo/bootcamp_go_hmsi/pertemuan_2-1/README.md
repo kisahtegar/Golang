@@ -1,4 +1,4 @@
-# Bootcamp Golang hmsi: Pertemuan 2
+# Bootcamp Golang hmsi: Pertemuan 2.1
 Learning about variable & type data in golang and some study cases.
 
 ## 📋 Previews
