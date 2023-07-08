@@ -9,17 +9,43 @@ This the output after running the project.
     Result :  true
     Tinggi Badan : 190 
 
+## 📝 Study Cases
+This the output after running the project.
+
+    ==================[Study case]==================
+
+    [1] Study case: Soal test bootcamp
+
     ===== [Soal No 1] =====
-    A) Total bunga : 1000000.00 
-    B) Total pinjaman :11000000.00 
-    C) Total cicilan: 916666.69 
+    A) Total bunga : 1000000.00
+    B) Total pinjaman :11000000.00
+    C) Total cicilan: 916666.69
 
     ===== [Soal No 2] =====
-    Nilai akhir Apip : 66.089 
+    Nilai akhir Apip : 66.089
 
     ===== [Soal No 3] =====
     Total Bensin =  3.7058823
     Total Biaya =  30944.117
+
+    ------------------------------------------------
+
+    [2] Study case: Soal 3 july
+
+    ========== [Soal No 1] ==========
+    Harga cokelat = 5000 - 1500 = 3500
+
+    ========== [Soal No 2] ==========
+    Uang Kembalian Anton = 10000 - 4000 = 6000
+
+    ========== [Soal No 3] ==========
+    Uang Kembalian Nana = 5000 - 3500 = 1500
+
+    ========== [Soal No 4] ==========
+    Uang Kembalian Dedi : 20000 - 12500 = 7500
+
+    ========== [Soal No 5] ==========
+    Uang Kembalian Monica : 50000 - 35000 = 15000
 
 ## 🧪 Getting Started
 You can run the project with (.exe), first make sure that the project is compiled:

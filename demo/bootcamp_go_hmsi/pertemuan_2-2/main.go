@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	studyCases "pertemuan_3/study_cases"
+)
 
 func main() {
 	// ================================================================================================
@@ -65,61 +68,14 @@ func main() {
 
 	var tinggiBadan uint8 = 179
 	tinggiBadan += 11
-	fmt.Printf("Tinggi Badan : %d \n\n", tinggiBadan)
+	fmt.Printf("Tinggi Badan : %d \n", tinggiBadan)
 
 	// ================================================================================================
 	// [Study case: Soal test bootcamp.]
 	//
-	// ------------------------------------------------------------------------------------------------
-	// (Soal Nomor 1)
-	fmt.Println("===== [Soal No 1] =====")
-	var pinjaman float32 = 10000000
-	var bunga float32 = 0.1
-	var cicilan float32 = 12
-
-	// Total Bunga
-	totalBunga := pinjaman * bunga
-	fmt.Printf("A) Total bunga : %.2f \n", totalBunga)
-
-	// Total pinjaman dihitung dari pinjaman + total bunga
-	totalPinjaman := pinjaman + totalBunga
-	fmt.Printf("B) Total pinjaman :%.2f \n", totalPinjaman)
-
-	totalCicilan := totalPinjaman / cicilan
-	fmt.Printf("C) Total cicilan: %.2f \n\n", totalCicilan)
-
-	// ------------------------------------------------------------------------------------------------
-	// (Soal Nomor 2)
-	fmt.Println("===== [Soal No 2] =====")
-	var nilaiAbsensiDefault float32 = 18
-	var nilaiAbsensiDapat float32 = 16
-	nilaiAbsensiResult := nilaiAbsensiDapat / nilaiAbsensiDefault
-	var bobotNilaiAbsensi float32 = 0.1
-
-	var nilaiTugas float32 = 70
-	var bobotNilaiTugas float32 = 0.2
-
-	var nilaiUts float32 = 80
-	var bobotNilaiUts float32 = 0.3
-
-	var nilaiUas float32 = 70
-	var bobotNilaiUas float32 = 0.4
-
-	nilaiAkhir := (nilaiAbsensiResult * bobotNilaiAbsensi) + (nilaiTugas * bobotNilaiTugas) + (nilaiUts * bobotNilaiUts) + (nilaiUas * bobotNilaiUas)
-	fmt.Printf("Nilai akhir Apip : %.3f \n\n", nilaiAkhir)
-
-	// ------------------------------------------------------------------------------------------------
-	// (Soal nomor 3)
-	fmt.Println("===== [Soal No 3] =====")
-	var jarak float32 = 63
-	var habisBensin float32 = 17
-	var biayaBensin float32 = 8350
-
-	// Dit: Biaya bensin?
-	totalBensin := jarak / habisBensin
-	fmt.Println("Total Bensin = ", totalBensin)
-
-	totalBiaya := biayaBensin * totalBensin
-	fmt.Println("Total Biaya = ", totalBiaya)
+	fmt.Println("\n==================[Study case]==================")
+	studyCases.Aritmatika1()
+	fmt.Println("\n------------------------------------------------")
+	studyCases.Aritmatika2()
 
 }

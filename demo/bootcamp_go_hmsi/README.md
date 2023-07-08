@@ -2,7 +2,12 @@
 
 A new backend project with Golang. Introduction Golang and make WEB API with Golang.
 
-<!-- ## 📋 Previews -->
+## 📋 List meeting
+This link contains a list meeting:
+- [pertemuan_1: Introduction to golang.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_1)
+- [pertemuan_2-1: Learning about variable & type data in golang and some study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_2-1)
+- [pertemuan_2-2: Learning about operator in golang and some study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_2-2)
+- [pertemuan_3: Learning about program flow control structures.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_3)
 
 ## 🧪 Getting Started
 You can run the project with (.exe), first make sure that the project is compiled:
