@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"pertemuan_7/interfaces"
 	"sort"
 )
 
@@ -21,20 +22,20 @@ func main() {
 
 	// -------[Contoh : 1] -------
 
-	var infoCustomer Information // interface
-	var dataCustomer = customer{
+	var infoCustomer interfaces.Information // interface
+	var dataCustomer = interfaces.Customer{
 		Id:      1,
 		Name:    "Budi",
 		Address: "Tangerang",
-		contact: contact{
+		Contact: interfaces.Contact{
 			Phone: "08214491525",
 			Email: "budi@mail.com",
 		},
 	}
-	infoCustomer = dataCustomer
+	infoCustomer = &dataCustomer
 
-	customerName := infoCustomer.getName()
-	customerContacts := infoCustomer.getContact()
+	customerName := infoCustomer.GetName()
+	customerContacts := infoCustomer.GetContact()
 
 	fmt.Println("Customer name is ", customerName)
 	for key, v := range customerContacts {
@@ -44,13 +45,13 @@ func main() {
 
 	// ------- [Contoh : 2] -------
 
-	var dataCustomer2 = customer{
+	var dataCustomer2 = interfaces.Customer{
 		Id:      2,
 		Name:    "Farhan",
 		Address: "Jakarta",
 	}
-	CustomerInfo := NewCustomer(&dataCustomer2) // include interface
-	customerName2 := CustomerInfo.getName()
+	CustomerInfo := interfaces.NewCustomer(&dataCustomer2) // include interface
+	customerName2 := CustomerInfo.GetName()
 
 	fmt.Println("Customer name is", customerName2)
 	fmt.Println()
@@ -66,15 +67,15 @@ func main() {
 	// hanya saja nilai yang diisikan bisa apa saja.
 
 	// ------- [Contoh : 1] -------
-	// var myInterface interface{}
-	var myInterface any // contoh dari type alias untuk interface
+	// var interfaces2 interface{}
+	var interfaces2 any // contoh dari type alias untuk interface
 
-	myInterface = "Burhan"
-	fmt.Println(myInterface)
-	myInterface = 12345
-	fmt.Println(myInterface)
-	myInterface = true
-	fmt.Println(myInterface)
+	interfaces2 = "Burhan"
+	fmt.Println(interfaces2)
+	interfaces2 = 12345
+	fmt.Println(interfaces2)
+	interfaces2 = true
+	fmt.Println(interfaces2)
 	fmt.Println()
 
 	// ------- [Contoh : 2] -------
@@ -103,8 +104,8 @@ func main() {
 	fmt.Println(mineInterface, "*", 2, "=", hasilPerkalian)
 
 	// ------- [Contoh 2: Casting interface kosong ke objek Pointer] -------
-	var mineInterface2 any = &customer{Id: 4, Name: "Anton"}
-	var name = mineInterface2.(*customer).Name
+	var mineInterface2 any = &interfaces.Customer{Id: 4, Name: "Anton"}
+	var name = mineInterface2.(*interfaces.Customer).Name
 	fmt.Println(name)
 	fmt.Println()
 
@@ -116,7 +117,7 @@ func main() {
 	// Agar data bisa diurutkan, kita harus implementasikan kontrak interface pada sort.Interface
 	// Visit https://pkg.go.dev/sort
 
-	customers := []customer{
+	customers := []interfaces.Customer{
 		{
 			Id:   1,
 			Name: "Kisah",
@@ -136,62 +137,56 @@ func main() {
 	}
 
 	fmt.Println(customers)
-	sort.Sort(customerSlice(customers))
+	sort.Sort(interfaces.CustomerSlice(customers))
 	fmt.Println(customers)
+	fmt.Println()
+
 	// ================================================================================================
-	// println("=============== Study Cases ===============")
-}
+	println("=============== Study Cases ===============")
+	// Umur Ayu adalah 10 tahun
+	ayu := interfaces.Anggota{Nama: "Ayu", Umur: 10}
 
-// This customer struct type.
-type customer struct {
-	Id      uint16
-	Name    string
-	Address string
-	contact
-}
-
-// This contact struct type.
-type contact struct {
-	Phone, Email string
-}
-
-// This method is used to get name from customer struct.
-func (cust customer) getName() string {
-	return cust.Name
-}
-
-// This method is used to get contact from customer embed struct contact.
-func (cust customer) getContact() map[string]string {
-	return map[string]string{
-		"Phone": cust.contact.Phone,
-		"Email": cust.contact.Email,
+	fmt.Println("a. Berapa umur cinta, jika ayu berumur 10 tahun?")
+	// karena umur Ayu 5 tahun dibawah cinta dan ayu berumur 10 tahun.
+	// Jadi umur cinta, 10 + 5 = 15 Tahun
+	cinta := interfaces.Anggota{
+		Nama: "Cinta",
+		Umur: ayu.GetUmur() + 5,
 	}
-}
+	fmt.Printf("   - Umur %s adalah %d tahun\n\n", cinta.Nama, cinta.Umur)
 
-// this Information is interface.
-type Information interface {
-	getName() string
-	getContact() map[string]string
-}
-
-// This method return customer information.
-func NewCustomer(cust *customer) Information {
-	return &customer{
-		Id:      cust.Id,
-		Name:    cust.Name,
-		Address: cust.Address,
+	fmt.Println("b. Berapa umur budi dan ibu,jika ayu berumur 10 tahun?")
+	// - Budi 2 tahun diatas Cinta, Umur cinta 15 tahun maka umur budi,
+	//   15+2 = 17 Tahun,
+	budi := interfaces.Anggota{
+		Nama: "Budi",
+		Umur: cinta.GetUmur() + 2,
 	}
-}
+	fmt.Printf("   - Umur %s adalah %d tahun\n", budi.Nama, budi.Umur)
 
-// customerSlice need to implement 3 method for sort.Interface (Len, Less, Swap)
-type customerSlice []customer
+	// - Umur ibu 3 kali lebih besar dari ayu dan ditambah 2. 3*10+2 = 32
+	ibu := interfaces.Anggota{
+		Nama: "Ibu",
+		Umur: 3*ayu.GetUmur() + 2,
+	}
+	fmt.Printf("   - Umur %s adalah %d tahun\n\n", ibu.Nama, ibu.Umur)
 
-func (v customerSlice) Len() int {
-	return len(v)
-}
-func (v customerSlice) Less(i, j int) bool {
-	return v[i].Name < v[j].Name
-}
-func (v customerSlice) Swap(i, j int) {
-	v[i], v[j] = v[j], v[i]
+	fmt.Println("c. Berapa umur ayah,jika ayu berumur 10 tahun?")
+	// menambahkan keseluruhan umur anak
+	ayah := interfaces.Anggota{
+		Nama: "Ayah",
+		Umur: ayu.GetUmur() + budi.GetUmur() + cinta.GetUmur(),
+	}
+	fmt.Printf("   - Umur %s adalah %d tahun\n\n", ayah.Nama, ayah.Umur)
+
+	fmt.Println("d. Berdasarkan perhitungan diatas, urutkan berdasarkan anak tertua hingga termuda?")
+	totalKeluarga := interfaces.SortKeluarga{
+		ayu,
+		budi,
+		cinta,
+	}
+	sort.Sort(totalKeluarga) // sorting keluarga
+	for _, v := range totalKeluarga {
+		fmt.Printf("   - Umur %s adalah %d tahun\n", v.GetNama(), v.GetUmur())
+	}
 }

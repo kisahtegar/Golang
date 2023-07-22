@@ -1,5 +1,5 @@
 # Bootcamp Golang hmsi: Pertemuan 7
-Learning about Interface.
+Learning about Interface & study cases.
 
 ## 📋 Previews
 This the output after running the project.
@@ -30,7 +30,21 @@ This the output after running the project.
 This the output after running the project.
 
     =============== Study Cases ===============
-    
+    a. Berapa umur cinta, jika ayu berumur 10 tahun?
+       - Umur Cinta adalah 15 tahun
+
+    b. Berapa umur budi dan ibu,jika ayu berumur 10 tahun?
+       - Umur Budi adalah 17 tahun
+       - Umur Ibu adalah 32 tahun
+
+    c. Berapa umur ayah,jika ayu berumur 10 tahun?
+       - Umur Ayah adalah 42 tahun
+
+    d. Berdasarkan perhitungan diatas, urutkan berdasarkan anak tertua hingga termuda?
+       - Umur Budi adalah 17 tahun
+       - Umur Cinta adalah 15 tahun
+       - Umur Ayu adalah 10 tahun
+
 
 ## 🧪 Getting Started
 You can run the project with (.exe), first make sure that the project is compiled:
