@@ -9,6 +9,10 @@ This link contains a list meeting:
 - [pertemuan_2-2: Learning about operator in golang and some study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_2-2)
 - [pertemuan_3: Learning about program flow control structures.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_3)
 - [pertemuan_4: Learning about Array, Slice & Map.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_4)
+- [pertemuan_5: Learning about Function and learn some study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_5)
+- [pertemuan_6: Learning about Pointer, Struct & Method. Learn some study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_6)
+- [pertemuan_7: Learning about Interface & study cases.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_7)
+- [pertemuan_8: Learning about Defer, Exit, Error.](https://github.com/kisahtegar/Golang/tree/main/demo/bootcamp_go_hmsi/pertemuan_8)
 
 ## 🧪 Getting Started
 You can run the project with (.exe), first make sure that the project is compiled:
